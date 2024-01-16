@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Currency converter</title>
+  </head>
+  <body>
+    <div class="currency-converter">
+      <h1>Курсы валют</h1>
+      <div id="converter-block">
+        <label for="amount">Сумма:</label>
+        <input
+          type="text"
+          id="amount"
+          pattern="[0-9]*"
+          placeholder="Введите число"
+        />
+
+        <label for="fromCurrency">Из валюты:</label>
+        <select id="fromCurrency">
+          <option value="KZT">Тенге</option>
+          <option value="USD">Доллар</option>
+          <option value="EUR">Евро</option>
+        </select>
+
+        <label for="toCurrency">В валюту:</label>
+        <select id="toCurrency">
+          <option value="KZT">Тенге</option>
+          <option value="USD">Доллар</option>
+          <option value="EUR">Евро</option>
+        </select>
+        <br />
+
+        <button onclick="convertCurrency()">Конвертация</button>
+
+        <div id="convertationResult"></div>
+        <div id="convertationError"></div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
